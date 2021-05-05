@@ -23,7 +23,7 @@ endif
 
 function! ctrlp#history#cmd#init()
     redir => hist
-    silent history
+    silent history :
     redir END
     let arranged_hist = []
     for h in split(hist,"\n")[1:]
